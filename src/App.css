@@ -110,6 +110,28 @@
 
 .hero__content {
   padding: var(--space-7) 0;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: hero-reveal 800ms ease-out 150ms forwards;
+}
+
+@keyframes hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__content {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .hero__eyebrow {
