@@ -1,43 +1,23 @@
 export default function ProjectsPreview() {
-    return (
-      <section id="projekt" style={{ padding: "80px 0", background: "#f8fafc" }}>
-        <div style={{ width: "min(1100px, calc(100% - 48px))", margin: "0 auto" }}>
-          <h2 style={{ margin: 0, fontSize: 32 }}>Projekt</h2>
-          <p style={{ marginTop: 10, color: "#475569", maxWidth: 700 }}>
-            Ett urval av arbeten och referenser. (Här bygger vi en grid med bilder.)
-          </p>
-  
-          <div
-            style={{
-              marginTop: 24,
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: 14,
-            }}
-          >
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div
-                key={i}
-                style={{
-                  borderRadius: 18,
-                  overflow: "hidden",
-                  border: "1px solid #e2e8f0",
-                  background: "white",
-                  boxShadow: "0 10px 30px rgba(2,6,23,0.05)",
-                }}
-              >
-                <div style={{ height: 160, background: "#e2e8f0" }} />
-                <div style={{ padding: 14 }}>
-                  <div style={{ fontWeight: 700 }}>Projekt {i + 1}</div>
-                  <div style={{ marginTop: 6, color: "#64748b", fontSize: 14 }}>
-                    Kort beskrivning kommer.
-                  </div>
-                </div>
+  return (
+    <section id="projekt" className="section section--muted">
+      <div className="container-wide">
+        <h2 className="section-title">Projekt</h2>
+        <p className="section-lead">Ett urval av arbeten och referenser. (Här bygger vi en grid med bilder.)</p>
+      </div>
+      <div className="container-wide">
+        <div className="projects-grid projects-grid--wide">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <article key={i} className="project-card">
+              <div className="project-card__media" />
+              <div className="project-card__body">
+                <div className="project-card__title">Projekt {i + 1}</div>
+                <div className="project-card__text">Kort beskrivning kommer.</div>
               </div>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
-      </section>
-    );
-  }
-  
+      </div>
+    </section>
+  );
+}

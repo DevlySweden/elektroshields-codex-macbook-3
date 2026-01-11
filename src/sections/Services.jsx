@@ -1,50 +1,55 @@
 const services = [
-    "Elinstallation",
-    "Eldesign / Ljusdesign",
-    "Projektering",
-    "Styrsystem",
-    "Belysning",
-    "Energioptimering",
-    "Energieffektivisering",
-  ];
-  
-  export default function Services() {
-    return (
-      <section style={{ padding: "80px 0" }}>
-        <div style={{ width: "min(1100px, calc(100% - 48px))", margin: "0 auto" }}>
-          <h2 style={{ margin: 0, fontSize: 32 }}>Tjänster</h2>
-          <p style={{ marginTop: 10, color: "#475569", maxWidth: 700 }}>
-            Vi utför arbeten inom bland annat följande områden.
-          </p>
-  
-          <div
-            style={{
-              marginTop: 24,
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: 14,
-            }}
-          >
-            {services.map((s) => (
-              <div
-                key={s}
-                style={{
-                  border: "1px solid #e2e8f0",
-                  borderRadius: 16,
-                  padding: 16,
-                  background: "white",
-                  boxShadow: "0 10px 30px rgba(2,6,23,0.04)",
-                }}
-              >
-                <div style={{ fontWeight: 700 }}>{s}</div>
-                <div style={{ marginTop: 6, color: "#64748b", fontSize: 14 }}>
-                  Kort beskrivning kommer.
-                </div>
+  {
+    title: "Elinstallation",
+    description: "Nyinstallation, utbyggnad och ombyggnad med tydlig dokumentation.",
+  },
+  {
+    title: "Eldesign / Ljusdesign",
+    description: "Planering av ljusmiljöer för funktion, trivsel och drift.",
+  },
+  {
+    title: "Projektering",
+    description: "Teknisk planering, ritningar och samordning för entreprenad.",
+  },
+  {
+    title: "Styrsystem",
+    description: "Smarta styrningar för fastighet, belysning och energi.",
+  },
+  {
+    title: "Belysning",
+    description: "Installation och justering av belysning i olika miljöer.",
+  },
+  {
+    title: "Energioptimering",
+    description: "Genomlysning av anläggning för lägre förbrukning.",
+  },
+  {
+    title: "Energieffektivisering",
+    description: "Åtgärder som ger stabil drift och bättre energieffekt.",
+  },
+];
+
+export default function Services() {
+  return (
+    <section className="section section--compact">
+      <div className="container">
+        <h2 className="section-title section-title--tight">Tjänster</h2>
+        <p className="section-lead section-lead--tight">
+          Vi utför arbeten inom nedanstående områden. Tydligt avgränsat och kvalitetssäkrat.
+        </p>
+
+        <div className="services-grid services-grid--compact">
+          {services.map((service) => (
+            <article key={service.title} className="service-card">
+              <span className="service-card__marker" aria-hidden="true" />
+              <div>
+                <div className="service-card__title">{service.title}</div>
+                <div className="service-card__text">{service.description}</div>
               </div>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
-      </section>
-    );
-  }
-  
+      </div>
+    </section>
+  );
+}

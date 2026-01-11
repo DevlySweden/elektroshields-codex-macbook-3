@@ -119,3 +119,8 @@ src/
   pages/        Sidor (Home, Projects, Contact) – om routing används
   styles/       Globala styles / variabler
   assets/       Bilder, ikoner, media
+
+## Förtydliganden för Codex
+
+Använd svenska tecken korrekt (å, ä, ö). Ingen ASCII-förenkling.
+
