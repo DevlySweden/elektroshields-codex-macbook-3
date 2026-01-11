@@ -16,7 +16,7 @@ export default function App() {
         <Home />
       </main>
       <footer className="site-footer">
-        <div className="container-wide site-footer__inner">© 2026 Elektroshields</div>
+        <div className="container-wide site-footer__inner">© 2026 Elektro J. Shields AB</div>
       </footer>
     </>
   );
