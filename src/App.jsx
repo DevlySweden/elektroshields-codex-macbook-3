@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/**
+ * Elektroshields – Test 3
+ * Innehåll & tonalitet inspirerad av elektroshields.se (svenska, saklig, professionell).
+ * Struktur: förberett för flersidigt upplägg via pages/, börjar med Home.
+ * Design: fullscreen hero, transparent header i hero, vit header vid scroll.
+ */
+import Header from "./components/Header";
+import Home from "./pages/Home";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main>
+        <Home />
+      </main>
+      <footer style={{ padding: "28px 0", borderTop: "1px solid #e2e8f0" }}>
+        <div style={{ width: "min(1100px, calc(100% - 48px))", margin: "0 auto", color: "#64748b" }}>
+          © {new Date().getFullYear()} Elektroshields
+        </div>
+      </footer>
     </>
-  )
+  );
 }
-
-export default App
