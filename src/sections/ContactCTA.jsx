@@ -27,7 +27,7 @@ export default function ContactCTA() {
               </div>
               <div>
                 <span className="contact-info__label">Telefon</span>
-                <span className="contact-info__value">08-123 45 67</span>
+                <span className="contact-info__value">+46 ** *** ** **</span>
               </div>
               <div>
                 <span className="contact-info__label">Ort</span>

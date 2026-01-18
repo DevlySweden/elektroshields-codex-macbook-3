@@ -104,8 +104,7 @@
   color: #f8fafc;
   background:
     linear-gradient(135deg, rgba(10, 18, 30, 0.92), rgba(10, 18, 30, 0.5)),
-    url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d1?auto=format&fit=crop&w=2400&q=80")
-      center/cover;
+    url("/src/assets/hero.jpg") 6% center / cover;
 }
 
 .hero__content {
